@@ -1,1 +1,31 @@
-<p>order works!</p>
+<form #form="ngForm" autocomplete="off" *ngIf="service.formData">
+    <div class="row">
+        <div class="col-md6">
+            <div class="form-group">
+                <label>Order No.</label>
+                <input name="orderNo" #orderNo="ngModel" [(ngModel)]="service.formData.orderNo"class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Customer</label>
+                <select name="customerId" #customerId="ngModel" [(ngModel)]="service.formData.customerId"class="form-control">
+                    <option value="">-Select</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md6">
+            <div class="form-group">
+                <label>Payment Method</label>
+                <select name="paymentMethod" #paymentMethod="ngModel" [(ngModel)]="service.formData.paymentMethod"class="form-control">
+                    <option value="0">-Select</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Grand Total</label>
+                <input name="grandTotal" #grandTotal="ngModel" [(ngModel)]="service.formData.grandTotal"class="form-control">
+            </div>
+        </div>
+    </div>
+   <div class="form-group">
+       <button type="submit" class="btn btn-dark"><i class="fa fca-database"></i> Submit</button>
+   </div>
+</form>

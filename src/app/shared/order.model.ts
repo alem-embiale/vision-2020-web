@@ -2,7 +2,7 @@ export class Order {
     orderId : number;
     orderNo : string;
     customerId : number;
-    PaymentMethod : string;
+    paymentMethod : string;
     grandTotal : number;
 
 }
